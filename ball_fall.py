@@ -1,6 +1,5 @@
 import matplotlib.pyplot as plt 
 import math
-from matplotlib.animation import FuncAnimation
 
 #Standard Variables and inital values
 g = 9.8
@@ -9,7 +8,7 @@ h = 4
 t1 = math.sqrt(2*h/g)
 
 #coefficient of restitution
-e = 0.6
+e = 0.8
 
 # speed at the touchdown to ground for the first time
 v = math.sqrt(2*g*h)
@@ -24,11 +23,15 @@ def get_bounce_num(t):
     temp = t1
     temp1 = temp
     count=0
+    count3 = 0
 
     while(temp<t):
+        if(count3>100):
+            break
         temp1 =temp
         temp =  temp + (pow(e , count+1))*t1*2
         count += 1
+        count3 +=1
 
     return [count, temp1]
 
@@ -55,7 +58,7 @@ def get_xy(t):
 i=0
 
 #getting coordinates and adding it to LIST
-while(i<3.5):
+while(i<10):
     coordinates = get_xy(i)
     X.append(coordinates[0])
     Y.append(coordinates[1])
@@ -69,7 +72,7 @@ ax.set_ylabel('Height of the ball')
 ax.set_xlabel('Horizontal distance covered')
 ax.plot(X, Y, "r")
 plt.xlim(0)
-plt.ylim(0)
+plt.ylim(0,5)
 
 
 plt.show()
