@@ -1,4 +1,4 @@
-#Simulation of ball dropped with horizontal velocity and coefficient of restitution#
+# Simulation of ball dropped with horizontal velocity and coefficient of restitution #
 
 A Python Code to simulate the behaviour of a rigid ball bouncing on the floor dropping from a
 height of 4 m and having a velocity of 1 m/s in the positive x axis direction. Consider the following
@@ -12,6 +12,6 @@ Instruction to Run:
 :) Happy Coding :)
 
 Made by geeky friends :
-Sahil
-Prathamesh Desai
-Pranay Sahu
+Sahil,
+Prathamesh Desai, 
+Pranay Sahu,
