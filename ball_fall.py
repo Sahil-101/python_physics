@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt 
 import math
+from matplotlib.animation import FuncAnimation
 
 #Standard Variables and inital values
 g = 9.8
@@ -61,5 +62,14 @@ while(i<3.5):
     i+=0.01
 
 #plotting the graph :)
-plt.plot(X, Y)
+fig, ax = plt.subplots()
+
+ax.set_title ("Trajectory of ball, with e = " + str(e))
+ax.set_ylabel('Height of the ball') 
+ax.set_xlabel('Horizontal distance covered')
+ax.plot(X, Y, "r")
+plt.xlim(0)
+plt.ylim(0)
+
+
 plt.show()
